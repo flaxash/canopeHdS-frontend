@@ -1,0 +1,116 @@
+<!doctype html>
+<html ng-app="website">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>CANOP&Eacute; HdS : votre partenaire p&eacute;dagogique</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css">    	
+	<!-- feuilles de styles persos -->
+    <link rel="stylesheet" type="text/css" href="css/website.css">
+  
+	<link rel="stylesheet" type="text/css" href="css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="css/actualites.css">
+    <link rel="stylesheet" type="text/css" href="css/conferences.css">
+    <link rel="stylesheet" type="text/css" href="css/confplayer.css">
+    <link rel="stylesheet" type="text/css" href="css/contacts.css">
+    <link rel="stylesheet" type="text/css" href="css/venir.css">
+    <link rel="stylesheet" type="text/css" href="css/baspage.css">
+    <link rel="stylesheet" type="text/css" href="css/mentions.css">
+    <!--fonts-->
+	<!--<link href='http://fonts.googleapis.com/css?family=Inika:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+    <link href='http://fonts.googleapis.com/css?family=Voces&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Voces&effect=shadow-multiple&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Coda&effect=shadow-multiple' rel='stylesheet' type='text/css'>
+    <!--fonts-->
+    <!--Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+
+<!-- top -->
+<div id="container-haut" class="container-center">
+        <h1 id="logo"><a href="#/home"></a></h1>
+        <div id="hautpage">
+            <div id="logosreseau">
+              <div id="reseau">le r&eacuteseau CANOP&Eacute; dans l&rsquo;acad&eacutemie :</div>
+               <div id="crdp"><a href="http://www.crdp.ac-versailles.fr" target="_blank">CRDP</a></div>
+               <div id="mde78"><a href="http://www.mde78.ac-versailles.fr" target="_blank">MDE78</a></div>
+               <div id="cddp95"><a href="http://www.cddp95.ac-versailles.fr" target="_blank">CDDP95</a></div>
+               <div id="cddp91"><a href="http://www.cddp91.ac-versailles.fr" target="_blank">CDDP91</a></div>               
+            </div>
+            <div class="containermenu">
+            <div id="menusite" class="btn-group" ng-controller="MenuCtrl">     
+                <a href="#/accueil"   class="btn btn-custom-lighten"  id="lienAccueil" ><div>ACCUEIL</div></a>
+                <a href="#/actus"  class="btn btn-custom-lighten" id="lienActualites"> 
+                <div>ACTUALIT&Eacute;S</div></a>
+                <a href="#/confs"  class="btn btn-custom-lighten"  id="lienConferences"><div>CONF&Eacute;RENCES</div></a>
+               <a href="#/contacts"  class="btn btn-custom-lighten"  id="lienContacts"><div>CONTACTS</div></a>
+            	  
+                <a href="#/venir" class="btn btn-custom-lighten"  id="lienVenir"><div>VENIR AU CANOP&Eacute;</div></a>
+
+            </div>
+            </div>
+        </div>
+</div>
+<div class="espace-menu"></div>
+<div id="container" ng-controller="ViewsCtrl">
+    <div id="views" ng-view></div>  
+</div>
+<div class="footer" id="bas-page">
+    <div class="footer-lists">
+        <div id="logodsden92"></div>
+        <ul>
+            <li><a href="http://www.cddp92.ac-versailles.fr/planAnimations/" target="_self">Programme des animations</a></li>
+            <li><a href="http://blog.crdp-versailles.fr/usagestice92/" target="_self">Actualit&eacute;s du Num&eacute;rique &Eacute;ducatif</a></li>
+            <li><a href="http://www.langues92.ac-versailles.fr/wordpress/" target="_self">Langues 92</a></li>
+            <li><a href="http://www.etwinning.ac-versailles.fr" target="_blank">Etwinning acad&eacute;mique</a></li>
+
+        </ul>
+        <ul>
+            <li><a href="http://blog.crdp-versailles.fr/librairiecddp92/" target="_self">Blog de la librairie</a></li>
+            <li><a href="https://0921824h.esidoc.fr" target="_self">Portail m&eacute;diath&egrave;que (e-sidoc)</a></li>
+            </br>
+            <li><a  href="#/mentions" target="_self">Mentions l&eacute;gales</a></li>
+        </ul>
+        <ul>
+            <li><a href="http://www.cddp92.ac-versailles.fr/atelier/atelier.htm" target="_self">Ateliers d'&eacute;criture</a></li>
+            <li><a href="http://www.cddp92.ac-versailles.fr/litterature-jeunesse/" target="_self">Litt&eacute;rature jeunesse</a></li>
+            <li><a href="http://www.ecoleetcinema92.ac-versailles.fr/cinema/" target="_self">Ecole et cin&eacute;ma</a></li>
+            <li><a href="http://www.collegeaucinema92.ac-versailles.fr/cinema/" target="_self">Coll&egrave;ge au cin&eacute;ma</a></li>
+        </ul>
+        <div id="logocg92"></div>
+        <div id="textecg92">partenaire de l'&Eacute;ducation nationale pour aider &agrave; la r&eacute;ussite &eacute;ducative de tous les &eacute;l&egrave;ves du d&eacute;partement.
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-sanitize.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+-->
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+
+<script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
+<script type="text/javascript">jwplayer.key="y4NhWyvuWV0u8DMVtM42SnE/IoztWdY1B0hc9A==";</script>
+<script type="text/javascript" src="js/x2js/xml2json.js"></script>
+
+<script type="text/javascript" src="js/website.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+<script type="text/javascript" src="js/services.js"></script>
+<script type="text/javascript" src="js/jw_player.js"></script>
+<script type="text/javascript" src="js/twitter-timeline.js"></script>
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12767998-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

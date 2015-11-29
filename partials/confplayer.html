@@ -1,0 +1,51 @@
+<div class="container-view">
+ 	<a href="#/confs"><button type="button" class="btn"><img src="images/back.png" class="imginbox" /> retour à la liste</button></a>
+    <div class="haut">
+        <h1 class="titreconf font-effect-shadow-multiple">{{conference.title}}</h1>
+        <!--<video id="player" src="{{urlVideo}}" width="425" height="300" controls preload></video>-->
+        <div class="espace-titre-conf"></div>
+        <div id="interfacevideo">
+            <div jw-player="" id="player"></div>
+            <div id="zone_droite">
+                <span >Chapitres :</span><br/>
+                <ul id="liensChapitres">
+                    <li ng-repeat="item in conference.field_video.und" ng-click="setChapitre(item)">
+                         <button type="button" class="btn btn-lire" ><img src="images/play.png" class="imginbox" /><span>Lire</span></button>
+                    </li>
+                </ul>
+                <ul id="titresChapitres">
+                     <li ng-repeat="item in conference.field_chapitres.und">
+                         <div>{{item.value}}</div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <div id="documents">
+        	<span >Documents :</span><br/>
+        	<ul id="listeDocs">
+            	<li ng-repeat="item in conference.field_docs_joints.und">
+                	<div class="docname">{{item.description}} </div>
+                   <a href="http://www.cddp92.ac-versailles.fr//drupal7/sites/default/files/docs_confs/{{item.filename}}" 
+                   target="_blank"><div class="docjoint"></div></a>
+               </li>
+            </ul>
+        </div>
+
+	</div>
+    <div  id="menuInfos"  class="btn-group">
+    	<button type="button" class="btn active" ng-click="setOnglet(1)" ng-model="radioModel" btn-radio="'conference'" id="btnConf"><img src="images/camera.png" class="imginbox" /><span>Conf&eacute;rence</span></button>
+        <!--<a class="btn txtbleu" href=""  ng-click="setOnglet(1)" ng-model="radioModel" btn-radio="'conference'" ><span>Conf&eacute;rence</span></a>-->
+        <button type="button" class="btn" ng-click="setOnglet(2)" ng-model="radioModel" btn-radio="'intervenant'" id="btnInterv"><img src="images/microphone.png" class="imginbox" /><span>Intervenant</span></button>
+       <!-- <a class="btn txtbleu"  href="" ng-click="setOnglet(2)" ng-model="radioModel" btn-radio="'intervenant'"><span>Intervenant</span></a>-->
+       <button type="button" class="btn" ng-click="setOnglet(3)" ng-model="radioModel" btn-radio="'ressources'" id="btnRess"><img src="images/html.png" class="imginbox" /><span>Ressources</span></button>
+        <!--<a class="btn txtbleu"  href="" ng-click="setOnglet(3)" ng-model="radioModel" btn-radio="'ressources'"><span>Ressources</span></a>-->
+    </div>
+    <div id="contenuInfos">
+        <div id="infos-conferences" ng-show="onglet=='conference'" ng-bind-html="conference.body.und[0].value"></div>
+        <div id="infos-intervenant" ng-show="onglet=='auteur'" ng-bind-html="conference.field_biographie.und[0].value"></div>
+        <div id="infos-bibliographie" ng-show="onglet=='biblio'" ng-bind-html="conference.field_bibliographie.und[0].value"></div>
+    </div>
+</div>
+<div class="espace-footer"></div>
+

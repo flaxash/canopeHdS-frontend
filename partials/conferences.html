@@ -1,0 +1,41 @@
+
+<div class="container-view">
+     <div class="section"></div>
+    	<div ng-controller="ConferencesListCtrl" class="conferences" >      
+            <ul  id="confsList" >
+              <li ng-repeat="conference in conferences | orderBy:sortProp | filter:filterTerm " >
+              	  <a href="#/confs/{{conference.nid}}" >
+                <div class="titre" ng-bind-html="conference.title" ></div>
+                <div class="auteur" ng-bind-html="conference.auteur"></div> 
+                
+                <div class="date">{{conference.date}}</div>
+                </a>
+                <div class="separateur"></div>
+              </li>
+            </ul>
+        <div id="filtres">
+        	<div id="titreFiltres">Filtres de Recherche</div>
+            <div class="espace"></div>
+            <div class="label-filtre">Rechercher dans la liste des conf&eacute;rences</div>          
+            <input type="text" ng-model="filterTerm" class="input-small" >
+            <div class="espace"></div>
+            <div class="label-filtre">Trier la liste des conf&eacute;rences selon
+                <select id="triselect" ng-model="sortProp" class="input-xs">
+                	  <option value="-date">la date</option>
+                    <option value="title">le titre</option>
+                    <option value="auteur">les intervenants</option>                    
+                </select>
+            </div>
+        </div>
+      </div>
+
+</div>
+<div class="espace-footer"></div>
+
+<!--<div>
+    <h3 class="text-error">{{message}}</h2>
+    <form class="form-inline">
+      <input type="text" ng-model="message" placeholder="Message">
+      <button type="submit" class="btn" ng-click="updateMessage(message)">Update Message</button>
+    </form>
+</div>-->

@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.section {
+	margin-right: auto;
+	margin-left: auto;
+	width:960px;
+	font-size: 24px;
+	color: rgba(255,199,0,0.98);
+	text-align: center;	
+}
+ .titresection {
+	color:	rgba(255,122,5,1.00) ;
+	font-size:24px ;
+}
+.imgtwitter {
+	width:18px;
+	height:18px;	
+}
+.imgrss {
+	width:18px;
+	height:18px;	
+}
+.imginbox {
+	height:16px;	
+	width:auto;
+	margin-top:-4px;
+	margin-right:5px;
+}
+#liens {
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#liens a {
+	margin-left:10px;
+	margin-right:10px;
+}
+.actualites {
+	margin-top: 30px;
+}
+.actualites .thumb {
+	float:left;
+	margin-left:10px;
+	width:150px;
+	height:20px;
+	background-size:auto; 	
+	background-position:center;
+	border-style:solid;
+	border-color:rgba(215,215,215,1.00);
+	border-width:thin;
+}
+.actualites .entete {
+	margin-left: 20px;
+	text-decoration:none;
+}
+.actualites .dateliste {
+	font-size:14px;
+	width:100px;
+	float:right;
+
+}
+.actualites .description {
+	float:left;
+	text-align:justify;
+	text-justify:inter-word;
+	padding-top:10px;
+	margin-left:20px;
+	color:rgba(100,100,100,1.00);
+	font-size:16px;
+	line-height:30px;
+}
+.actualites .visuel {
+	float:left;
+	margin-left:25px;
+	margin-top:10px;
+	width:400px;
+	height:150px;
+	background-size: cover; 	
+	background-position:center;
+	border-style:solid;
+	border-color:rgba(215,215,215,1.00);
+	border-width:thin;
+
+}
+.actualites .date {
+	font-size:14px;
+	float:left;
+	width:400px;
+	margin-left:20px;
+	margin-top:5px;
+}
+.actualites .titre {
+	float:left;
+	font-size:24px;
+	margin-left:20px;
+	width:400px;	
+	line-height:normal;
+}
+.actualites .soustitre {
+	float:left;
+	width : 400px;
+	font-size:16px;	
+	margin-left:20px;
+	margin-top:5px;
+
+}
+.actualites .doc {
+	float:left;
+	margin-left:20px;
+	margin-top:10px;
+
+}
+.actualites .accordion-group {
+	border-style:none;
+}
+.actualites .accordion-toggle {
+	border-style:none;
+	border-top-style:solid;
+	border-top-width:thin;
+	border-color:rgba(255,122,5,1.00);
+}
+.actualites a.accordion-toggle {
+	color:rgba(23, 82, 93, 1) !important;
+	text-decoration:none;
+}
+.actualites .accordion-inner {
+	border-top:none;
+}
+.actualites .accordion-heading {
+	
+}
+#espace {	
+	float: none;
+	clear: left;
+	position: relative;
+	height:40px;
+}
+

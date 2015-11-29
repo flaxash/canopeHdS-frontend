@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+.bas-page div {
+	text-align:left;
+	color:rgba(224,224,224,1.00) !important;	
+	list-style:none;
+}
+.bas-page ul {
+	width:200px;
+	float:left;
+	margin-right:40px;
+	display:block;	
+}
+/*.bas-page a,.bas-page a:link,.bas-page a:visited,.bas-page a:hover,.bas-page a:active {
+	text-decoration:none;
+	color:rgba(216,216,216,1.00) !important;
+}
+*/#bas-page a {
+	text-decoration:none;
+	color:rgba(216,216,216,1.00) !important;
+}

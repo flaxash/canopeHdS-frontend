@@ -1,0 +1,43 @@
+<div class="container-view">
+    <div class="section"></div>
+    <div class="titresection font-effect-shadow-multiple"> Actualit&eacute;s du Canop&eacute; Hauts de Seine (92)</div>
+    <div id="liens">
+    <a href="http://www.cddp92.ac-versailles.fr/new_letter/index.htm" target="_blank"><button type="button" class="btn btn-warning"><img src="images/inbox.png" class="imginbox" /> newsletter du Canopé HdS</button></a>
+    <a href="feed://www.cddp92.ac-versailles.fr/drupal7/rss.xml" target="_blank"><button type="button" class="btn btn-warning"><img src="images/rss.png" class="imgrss" /> flux rss du site</button></a>
+    <a href="https://twitter.com/canopehds" target="_self"><button type="button" class="btn btn-warning"><img src="images/twitter_blanc.png" class="imgtwitter" /> suivre @Canop&eacute; HdS</button></a>
+    </div>
+      <div ng-controller="ActualitesListCtrl" class="actualites">
+        <!--<ul id="titres">
+        	<li ng-repeat="actualite in actualites | orderBy:date" data-ng-click="$parent.actu=actualite.nid">
+            	<div><span class="titremenu" ng-bind-html="actualite.title" ></span></div>
+           </li>
+        </ul>
+        <ul id="actusList">
+          <li class="div-repeat" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="actualite in actualites | orderBy:date" ng-show="$parent.actu == actualite.nid"> 
+            <div class="titre font-effect-shadow-multiple" ng-bind-html="actualite.title"  id="actualite.nid"></div>
+            <div class="date" >{{actualite.date}}</div>
+            <div class="description" ng-bind-html="actualite.body"></div>
+            <div id="espace"></div>
+            <div class="separateur"></div>
+            <div id="espace"></div>
+          </li>
+        </ul>-->
+        <accordion >
+        	<accordion-group id="actusList"  ng-repeat="actualite in actualites | orderBy:sortProp">
+            	<accordion-heading >
+                <div class="thumb img-rounded" style=" background-image: url({{actualite.image}}); "></div>
+                <span class="entete font-effect-shadow-multiple" ng-bind-html="actualite.title" ></span>
+                <span class="dateliste">{{actualite.date}}</span>
+              </accordion-heading>
+                <p><div class="titre font-effect-shadow-multiple" ng-bind-html="actualite.annonce"></div>
+                <div class="visuel img-rounded" style=" background-image: url({{actualite.image}}); "></div>
+              <div class="soustitre" ng-bind-html="actualite.soustitre"></div>
+              <div class="date" >{{actualite.date}}</div>    	
+            <!-- <button class="btn doc "><div ng-bind-html="actualite.docs"></div></button></p>-->
+             <div class="description" ng-bind-html="actualite.descriptif"></div>
+              </div>
+           </accordion-group>
+        </accordion>
+      </div>
+</div>
+<div class="espace-footer"></div>

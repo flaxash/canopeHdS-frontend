@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* CSS Document */
+.haut {
+	position:relative;
+}
+.titreconf {	
+	color: rgba(255,122,5,1.00);	
+}
+#interfacevideo {
+	position:relative;
+	min-height:280px;	
+}
+#zone_droite {
+	height :auto;
+	float:left;
+	width:530px;
+	margin-left: 50px;
+	
+}
+#zone_droite ul {
+	-webkit-padding-start: 5px;
+}
+#zone_droite span {
+	font-size:16px;
+}
+#liensChapitres {
+	width:80px;
+	float:left;
+	list-style:none;
+	padding-top:10px;
+}
+#liensChapitres li {
+	margin-bottom:5px;	
+	height:35px;
+	
+}
+.btn-lire span {
+font-size:12px !important;	
+}
+#titresChapitres {
+	width:350px;
+	float:left;
+	list-style:none;	
+	font-size:14px;
+	padding-top:10px;
+}
+#titresChapitres li {
+	height:40px;
+}
+#titresChapitres li div {
+	padding-top:6px;
+}
+
+#listeDocs {
+	list-style:none;
+	-webkit-padding-start: 5px;
+	color:	rgba(38,76,140,1.00);
+	float:left;
+}
+#documents {
+	position:relative;
+	width:50%;
+	margin-left: 10px;	
+}
+#documents span {
+	font-size:16px;	
+}
+div .docjoint {
+	float:left;
+	width:30px;
+	height:30px;
+	margin-top:5px;
+	background-image:url(../images/text_vert.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:contain;
+}
+.docname {
+	padding-top:10px;
+	padding-right:10px;
+	
+	float:left;
+}
+.espace-titre-conf {
+	width:100%;
+	height:20px;	
+}
+#player {
+	width:360px;
+	height:240px;
+	float:left;
+}
+#player_wrapper {
+	width:400px;
+	height:250px;
+	float:left;
+	margin-left:10px;
+	margin-top:25px;
+	z-index:9;
+}
+#interfacevideo {
+	display:block;
+	height:auto;
+	position:relative;
+		
+}
+#menuInfos {
+	float:left;
+	padding-top:2px;
+	width:960px;
+	height:32px;
+	margin-left:10px;
+	margin-top:20px;
+	border-bottom:solid thin rgba(255,122,5,1.00);
+	
+}
+#menuInfos a:first-child {
+		
+}
+#contenuInfos {
+	float:left;
+	margin-left:10px;
+	clear:both;
+	margin-top:20px;
+	text-align:justify;
+	text-justify:inter-word;
+	font-size:18px;
+}
+
+#menu .element {
+	margin-right : 20px;
+	max-width:100px;
+	padding-left:15px;
+	padding-right:15px;
+}
+#menu .element active {
+	color:	rgba(38,76,140,1.00);
+}

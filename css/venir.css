@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS Document */
+.adresse {
+	margin-bottom:50px;	
+}
+#horaires {
+	width:300px;
+	padding-left:50px;
+	float:left;
+}
+#googlemap {
+	float:left;
+}
+#transports {
+	clear:both;
+	padding-top:50px;	
+}
+#lienmap {
+	float:left;
+	margin-top:105px;
+	padding-left:50px;
+}	
+#lienmap a {
+	color:#FFF !important;
+	text-decoration:none !important;
+}
+#vcard {
+	float:left;
+	width:250px;
+	padding-left:50px;	
+}
+.imgvcard {
+	width:64px;
+	height:auto;	
+}

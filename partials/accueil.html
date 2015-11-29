@@ -1,0 +1,54 @@
+<header id="header">
+    <div >
+    	<div class="container-center slider" ng-controller="AlaUneCtrl">
+	      	<div  class="slides">
+            	<carousel interval="myInterval">
+                <slide ng-repeat="slide in slides" active="slide.active">
+                  <a href="{{slide._lien}}" target="_blank"><img ng-src="{{slide._image}}" style="margin:auto;"></a>
+                </slide>
+              </carousel>
+			</div>
+          
+			<div id="texte-bandeau" class="color">
+                <h2 class="titre-bandeau" >Canop&eacute; Hauts-de-Seine</h2>
+                <p>Le Canop&eacute; Hauts-de-Seine propose des ressources p&eacute;dagogiques et documentaires pour accompagner la communauté &eacute;ducative.
+                </p>
+                <div id="message_dyn" class="infos">{{message._texte}}</div>
+        	</div>
+       </div>
+
+    </div>
+</header>
+<div id="tweets" >
+<span class="font-effect-shadow-multiple" style="font-size:16px;margin-left:0px;">Les tweets de @canop&eacute; HdS</span>
+<div twitter-timeline="392671146560090112" auto-resize="true"  data-tweet-limit="2">Chargement des tweets...</div></div>
+<div id="confs">
+    <span class="font-effect-shadow-multiple" style="font-size:16px;margin-left:20px;">Les conférences à la Une</span>
+    	<div ng-controller="ConfsPreviewCtrl" class="conferencespreview" >      
+            <ul  id="confspreviewlist" >
+              <li ng-repeat="conference in confspreview | orderBy:sortProp "  >
+                <a href="#/confs/{{conference.nid}}" class="titre" ng-bind-html="conference.title" ></a>
+                <div class="auteur" ng-bind-html="conference.auteur"></div> 
+                
+                <div class="date" ng-bind-html="conference.date"></div>
+<!--                <a href="#/confs/{{conference.nid}}" ng-click="setConfSelected(conference)" class="lienFond">voir la conf&eacute;rence</a>
+-->                
+				  <div class="separateur"></div>
+              </li>
+            </ul>
+		</div>
+</div>
+<div id="actus">
+<span class="font-effect-shadow-multiple" style="font-size:16px;margin-left:20px;">Actualités</span>
+    	<div ng-controller="ActusPreviewCtrl" class="actualitespreview" >      
+            <ul  id="actuspreviewlist" >
+              <li ng-repeat="actualite in actuspreview | orderBy:date:false "  >
+              	  <div class="previewactu img-rounded" style="background-image:url({{actualite.image}})"></div>
+                <a class="titre" ng-bind-html="actualite.titre" href="#/actus"></a>
+                <div class="date" ng-bind-html="actualite.date"></div>
+				  <div class="separateur"></div>
+              </li>
+            </ul>
+		</div>
+</div>
+<div class="espace-footer"></div>

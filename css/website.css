@@ -1,0 +1,209 @@
+body {
+	/*font-family: 'Inika', serif;*/	
+	font-family: 'Voces', cursive !important;
+	color: rgba(78,78,78,1.00);
+	height: 100%;
+	margin: 0;	/*background-image: url(../images/fond0.jpg);
+	background-size:cover;*/
+}
+
+a {
+	text-decoration:none;
+	color:	rgba(38,76,140,1.00);
+}
+.btn {
+	font-family:'Voces', cursive !important ;
+}
+#container {
+	padding: 80px 0 40px 0;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+#container-haut {
+	position:fixed;
+	z-index:10;
+	width:100%;
+	height:92px;
+	overflow:visible !important;
+	/*background-color: rgba(23, 82, 93, 1) !important;*/
+	background-color:#FFFFFF;
+	overflow:hidden;
+}
+
+.container-center   {
+	margin-left: auto;
+	margin-right: auto;
+	overflow:hidden;
+	width: 960px;
+}
+
+#logo {
+    float: left;
+    margin: 4px;
+	background-color: rgba(255, 255, 255, 1);
+/*	border-radius:60px;
+*/	width:170px;
+	height:80px;
+	
+}
+
+#logo a {
+    background: url(../images/logo_canope92.png) no-repeat top left;
+	background-size:contain;
+    width: 162px;
+	height:70px;
+    display: block;
+    text-indent: -9999px;
+}
+#logosreseau {
+	margin-top:10px;
+	margin-left:180px;
+	height:50px;
+	width:960px;
+}
+
+#reseau {
+	float:left;
+	color:rgba(255,122,5,1.00);	
+}
+#hautpage {
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;	
+	border-style:none;
+	border-bottom:solid thin rgba(7,82,92,0.2);
+}
+#hautpage a {
+	color:rgba(255,122,5,1.00);
+	text-decoration:none;
+}
+#crdp, #mde78, #cddp95, #cddp91 {
+	font-size:18px;
+	float:left;
+	margin-left:50px;
+	color:rgba(255,122,5,1.00) !important;
+}
+.containermenu {
+	width:580px;	
+	margin-left: auto !important;
+	margin-right: auto !important;
+
+}
+#menusite a {
+	color:#FFF;
+	text-decoration:none;
+	
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	clear: both;
+	height: auto;
+	background-repeat: no-repeat;
+	background-color: rgba(23, 82, 93, 1) !important;
+	width:100%;
+	overflow: hidden;
+	text-align: left;
+	font-size: 14px;
+	color: rgba(224,224,224,1.00) !important;
+	margin-left: auto;
+	margin-right: auto;
+	z-index:10;
+	padding-top: 5px;
+}
+.footer-lists {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer ul {
+	float:left;
+	padding-top:10px;
+	margin-right:40px;
+	display:block;
+	list-style-type:none;
+	font-size:small;
+}
+
+#logocg92 {
+	background-image: url(../images/logo-cg92_150px.png);
+	width: 150px;
+	height: 38px;
+	float: left;
+	background-repeat: no-repeat;
+}
+#textecg92 {
+	font-size:12px;
+	color:#AAA;
+	width:170px;
+	float:left;
+		
+}
+#logodsden92 {
+	background-image:url(../images/logo-dsden92_75px.png);
+	width:75px;
+	height:100px;
+	float:left;
+	background-repeat:no-repeat;
+}
+
+.espace-footer {
+	height:120px;
+	clear:both;
+}
+.espace-menu {
+	height:65px;
+	clear:both;
+}
+.nav, .pagination, .carousel, a,  a:link,  a:visited,  a:hover,  a:active { 
+	cursor: pointer; 
+}
+/*custom bootstrap*/
+.btn-custom-lighten.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn-custom-lighten {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #08636f;
+  background-image: -moz-linear-gradient(top, #07525c, #0b7c8b);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#07525c), to(#0b7c8b));
+  background-image: -webkit-linear-gradient(top, #07525c, #0b7c8b);
+  background-image: -o-linear-gradient(top, #07525c, #0b7c8b);
+  background-image: linear-gradient(to bottom, #07525c, #0b7c8b);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff07525c', endColorstr='#ff0b7c8b', GradientType=0);
+  border-color: #0b7c8b #0b7c8b #053d44;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #0b7c8b;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  padding:0px !important;
+	position:relative;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-custom-lighten div {
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:12px;
+	padding-right:12px;
+	position:relative;
+	text-align:left;
+}
+.btn-custom-lighten:hover,
+.btn-custom-lighten:focus,
+.btn-custom-lighten:active,
+.btn-custom-lighten.active,
+.btn-custom-lighten.disabled,
+.btn-custom-lighten[disabled] {
+  color: #ffffff;
+  background-color: #0b7c8b;
+  *background-color: #096774;
+}
+.btn-custom-lighten:active,
+.btn-custom-lighten.active {
+  /*background-color: #07525c;*/
+  background-color:	rgba(255,122,5,1.00);
+}

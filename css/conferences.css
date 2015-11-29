@@ -1,0 +1,126 @@
+@charset "UTF-8";
+.container-view {
+	
+}
+.conferences {
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	width:960px;
+}
+#confsList {
+	width:	600px;
+	float:left;
+}
+
+#confsList li  {
+	/*font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;*/
+	font-size: small;
+	width:100%;
+	margin-right:10px;
+	margin-left:10px;
+	list-style-type:none;
+	clear:both;
+	color:rgba(119,119,119,1.00);
+	text-align:left;
+	background-color:rgba(255,255,255,1.00);
+}
+#confsList li .titre {
+	/*font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;*/
+	font-size: large;
+	color:rgba(60,60,60,1.00);
+	width:100%;
+	
+}
+#confsList li .separateur {
+	display:block;
+	background-color:rgba(232,232,232,1.00);
+	width:100%;
+	height:2px;
+	float:left;
+}
+#confsList li .auteur {
+	width:100%;
+	float:left;
+}
+#confsList li .date {
+	width:60%;
+	float:left;
+}
+#confsList li .lienFond {
+	position:relative;
+	float:right;
+}
+#confsList li a {
+	text-decoration:none;
+	color:	rgba(38,76,140,1.00);
+}
+
+.btnPlay  {
+	float:right;
+	position:absolute;	
+	right :0;
+	top : -60px;
+	display:block;
+}
+#icon-youtube-play {
+	display:block;
+	vertical-align:super;
+}
+#filtres {
+	width:250px;
+	display:block;
+	float:right;
+	padding:10px;
+	padding-top:0px;
+	margin-left:40px;
+	border-style:solid;
+	border-width:thin;
+	border-radius:6px;	
+	border-color:rgba(255,122,5,1.00);
+}
+.label-filtre {
+	width:60%;
+	text-align:right;	
+	float:right;
+	display:block;
+	clear:both;
+	
+}
+#titreFiltres {
+	width:100%;
+	text-align:center;	
+	border-style:none;
+	border-width:thin;
+	border-radius:6px;
+	background-color:rgba(255,122,5,1.00);
+	color:#FFF;
+}
+#filtres option {
+	font-size:12px;	
+}
+.input-small {
+	width:200px;
+	float:right;
+	text-align:right;
+	font-size:18px;
+	
+}
+.input-medium {
+	width:200px;
+	text-align:right;
+	font-size:18px;
+	align-items:flex-end;	
+}
+#filtres .espace {
+	height:40px;
+	width:100%;
+	clear:both;
+	display:block;
+	float:left;
+}
+#triselect {
+	 width:150px;
+	 text-align:right;
+}
+
