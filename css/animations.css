@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* CSS Document */
+
+animated.ng-enter {
+	-webkit-transition:0.5s linear all;
+  	transition:0.5s linear all;
+
+	opacity:0;
+}
+
+animated.ng-enter-active {
+
+	opacity:1;
+}
+
+animated.ng-leave {
+	opacity:1;
+	
+}
+
+animated.ng-leave-active {
+	opacity:0;
+	
+}

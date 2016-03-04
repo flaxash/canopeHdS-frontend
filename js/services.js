@@ -1,18 +1,18 @@
 // JavaScript Document
 
 cddp92App.factory('StateService', function () {
-    var message = 'Hello Message';
-    var getMessage = function () {
-        return message;
-    };
-    var setMessage = function (m) {
-        message = m;
-    };
+        var message = 'Hello Message';
+        var getMessage = function() {
+            return message;
+        };
+        var setMessage = function(m) {
+            message = m;
+        };
 
-    return {
-        getMessage: getMessage,
-        setMessage: setMessage
-    }
+        return {
+            getMessage: getMessage,
+            setMessage: setMessage
+        }
    })
 	.factory('jsonService', function ($http,$q) {
 			 return {
@@ -29,10 +29,7 @@ cddp92App.factory('StateService', function () {
 				},
 				getActusPreview:function(callback) {
 					$http.get('http://www.cddp92.ac-versailles.fr/drupal7/?q=gateway/views/actuspreview.json').success(callback);	
-				},
-                getRssFromActusNum:function(callback) {
-                  $http.get('http://blog.crdp-versailles.fr/usagestice92/index.php/feed/atom').success(callback);
-                }
+				}
 			 }
 	})
 	.factory('xmlService', function ($http) {

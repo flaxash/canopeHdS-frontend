@@ -21,9 +21,9 @@
 </header>
 <div id="tweets" >
 <span class="font-effect-shadow-multiple" style="font-size:16px;margin-left:0px;">Les tweets de @canop&eacute; HdS</span>
-<div twitter-timeline="392671146560090112" auto-resize="true"  data-tweet-limit="2">Chargement des tweets...</div></div>
+<div twitter-timeline="392671146560090112" auto-resize="true"  data-tweet-limit="3">Chargement des tweets...</div></div>
 <div id="confs">
-    <span class="font-effect-shadow-multiple" style="font-size:16px;margin-left:20px;">Les conférences à la Une</span>
+<span class="font-effect-shadow-multiple" style="font-size:16px;margin-left:20px;">Les conférences à la Une</span>
     	<div ng-controller="ConfsPreviewCtrl" class="conferencespreview" >      
             <ul  id="confspreviewlist" >
               <li ng-repeat="conference in confspreview | orderBy:sortProp "  >
@@ -44,11 +44,12 @@
             <ul  id="actuspreviewlist" >
               <li ng-repeat="actualite in actuspreview | orderBy:date:false "  >
               	  <div class="previewactu img-rounded" style="background-image:url({{actualite.image}})"></div>
-                <a class="titre" ng-bind-html="actualite.titre" href="#/actus"></a>
+                <a class="titre" ng-bind-html="actualite.title" href="#/actus"></a>
                 <div class="date" ng-bind-html="actualite.date"></div>
 				  <div class="separateur"></div>
               </li>
             </ul>
 		</div>
 </div>
+
 <div class="espace-footer"></div>

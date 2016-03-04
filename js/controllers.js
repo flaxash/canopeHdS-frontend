@@ -112,13 +112,6 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
 			$scope.sortProp = "-date";
 			
 	})
-	.controller('ActualitesNumCtrl', function($scope,jsonService) {
-			jsonService.getRssFromActusNum(function(data) {
-   				$scope.actusNum = data;
-				$scope.actusNum.predicate = '-date';
-  			});
-
-	})
 	.controller('ConfplayerCtrl', function ($scope, $routeParams, $http) {
 		//todo : remplacer l' appel  au json par un service + allumer le bouton 'La conférence'
 		removeAllMenuActiveClass();

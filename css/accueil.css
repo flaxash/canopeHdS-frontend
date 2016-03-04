@@ -68,6 +68,7 @@
 	width:30%;	
 	float:left;
 	padding:10px;
+    padding-right: 20px;
 }
 #tweets p .e-entry-title {
 	font-family: 'Voces', cursive !important;	
@@ -77,6 +78,7 @@
 	width:30%;
 	float:left;
 	padding:10px;
+    padding-right: 20px;
 }
 .conferencespreview {
 	margin-top:10px;	
@@ -114,17 +116,13 @@
 	height:2px;
 }
 #actuspreviewlist .previewactu {
-	width:100%;
-	height:30px;
+	width: 60px;
+    height: 60px;
+    margin-right: 2px;
+    float:left;
 	background-size:cover;
 	background-position:center;	
 	border-style:solid;
 	border-width:thin;
 	border-color:rgba(215,215,215,1.00);
-}
-/*blog*/
-#blognumerique {
-    width: 100%;
-    float: left;
-    padding: 10px;
 }
