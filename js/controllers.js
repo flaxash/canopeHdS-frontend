@@ -117,8 +117,21 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
    				$scope.actusNum = data;
 				$scope.actusNum.predicate = '-date';
   			});
-
 	})
+//    .controller('FeedCtrl', function ($scope, FeedList) {
+//		$scope.feeds = FeedList.get();
+//		$scope.$on('FeedList', function (event, data) {
+//			$scope.feeds = data;
+//		});
+//	})
+    .controller('FeedCtrl', ['$scope', 'FeedService', function($scope, Feed) {
+            $scope.loadFeed = function(e) {
+            Feed.parseFeed($scope.feedSrc).then(function(res) {
+            $scope.feeds = res.data.responseData.feed.entries;
+        });
+
+      }
+    }])
 	.controller('ConfplayerCtrl', function ($scope, $routeParams, $http) {
 		//todo : remplacer l' appel  au json par un service + allumer le bouton 'La conférence'
 		removeAllMenuActiveClass();

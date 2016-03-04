@@ -1,6 +1,6 @@
 
 /* App Module */
-var cddp92App = angular.module('website',  ['ngSanitize','ui.bootstrap','twitter.timeline']);
+var cddp92App = angular.module('website',  ['ngSanitize','ui.bootstrap','twitter.timeline','feedModule','ngRoute']);
 
 cddp92App.config(['$routeProvider', function($routeProvider) {
         $routeProvider.

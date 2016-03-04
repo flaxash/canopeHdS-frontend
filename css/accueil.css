@@ -128,3 +128,10 @@
     float: left;
     padding: 10px;
 }
+
+/*actus du numerique*/
+#actusNumeriques {
+	width:30%;
+	float:left;
+	padding:10px;
+}

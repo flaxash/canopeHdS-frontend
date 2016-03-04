@@ -31,7 +31,14 @@ cddp92App.factory('StateService', function () {
 					$http.get('http://www.cddp92.ac-versailles.fr/drupal7/?q=gateway/views/actuspreview.json').success(callback);	
 				},
                 getRssFromActusNum:function(callback) {
-                  $http.get('http://blog.crdp-versailles.fr/usagestice92/index.php/feed/atom').success(callback);
+                  $http.jsonp('http://feeds.feedburner.com/actualitesNumeriques').success(callback);
+//                    $.ajax({
+//                            type:"GET",
+//                            dataType:"jsonp",
+//                            url:"http://ajax.googleapis.com/ajax/services/feed/load",
+//                            data:{"v":"1.0", "num":"10", "q":"http://feeds.feedburner.com/actualitesNumeriques"},
+//                            success: callback
+//                    });
                 }
 			 }
 	})
