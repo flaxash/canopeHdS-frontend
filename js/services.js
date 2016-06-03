@@ -40,7 +40,7 @@ cddp92App.factory('StateService', function () {
             	getSlides: function(callback) {
        			//$http.get('http://www.cddp92.ac-versailles.fr/aLaUne/listeImages.xml').success(callback);
 				$http.get(
-                    'http://www.cddp92.ac-versailles.fr/aLaUne/listeImages.xml',
+                    "http://www.cddp92.ac-versailles.fr/aLaUne/listeImages.xml?t="+Math.random(),
                     {transformResponse:function(data) {
                       // convert the data to JSON and provide
                       // it to the success function below
@@ -61,7 +61,7 @@ cddp92App.factory('StateService', function () {
 				getMessage: function(callback) {
        			//$http.get('http://www.cddp92.ac-versailles.fr/aLaUne/listeImages.xml').success(callback);
 				$http.get(
-                    'http://www.cddp92.ac-versailles.fr/aLaUne/listeImages.xml',
+                    "http://www.cddp92.ac-versailles.fr/aLaUne/listeImages.xml?t="+Math.random(),
                     {transformResponse:function(data) {
                       // convert the data to JSON and provide
                       // it to the success function below

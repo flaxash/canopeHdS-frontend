@@ -11,6 +11,7 @@ cddp92App.config(['$routeProvider', function($routeProvider) {
             when('/venir', {templateUrl: 'partials/venir.html', controller: 'VenirCtrl'}).
             when('/actus', {templateUrl: 'partials/actualites.html', controller: 'ActusCtrl'}).
             when('/mentions', {templateUrl: 'partials/mentions.html', controller: 'MentionsCtrl'}).
+            when('/ressources', {templateUrl: 'partials/ressources.html', controller: 'RessourcesCtrl'}).
 			otherwise({redirectTo: '/accueil'}); 
 }]);
 
@@ -38,5 +39,6 @@ function removeAllMenuActiveClass() {
 	removeClass (	"active",document.getElementById("lienConferences"));
 	removeClass (	"active",document.getElementById("lienVenir"));
 	removeClass (	"active",document.getElementById("lienAccueil"));
+    removeClass (	"active",document.getElementById("lienRessources"));
 
 }

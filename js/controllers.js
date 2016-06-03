@@ -53,6 +53,13 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
 		//d.classList.add("active");
 		addClass("active",d);
 	})
+    .controller('RessourcesCtrl', function () {
+		//todo : allumer le bouton Accueil
+		removeAllMenuActiveClass();
+		var d = document.getElementById("lienRessources");
+		//d.classList.add("active");
+		addClass("active",d);
+	})
 	.controller('MenuCtrl', function ($scope) {
 		//todo
 
@@ -108,7 +115,7 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
 				}
 				$scope.conferences.predicate = 'title';
   			});
-			$scope.filterTerm = "2015";
+			$scope.filterTerm = "";
 			$scope.sortProp = "-date";
 			
 	})

@@ -6,6 +6,8 @@
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css">    	
+    <!-- icones de Font-Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- feuilles de styles persos -->
     <link rel="stylesheet" type="text/css" href="css/website.css">
   
@@ -17,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="css/venir.css">
     <link rel="stylesheet" type="text/css" href="css/baspage.css">
     <link rel="stylesheet" type="text/css" href="css/mentions.css">
+    <link rel="stylesheet" type="text/css" href="css/ressources.css">
     <!--fonts-->
 	<!--<link href='http://fonts.googleapis.com/css?family=Inika:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
     <link href='http://fonts.googleapis.com/css?family=Voces&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -33,17 +36,18 @@
         <h1 id="logo"><a href="#/home"></a></h1>
         <div id="hautpage">
             <div id="logosreseau">
-              <div id="reseau">le r&eacuteseau CANOP&Eacute; dans l&rsquo;acad&eacutemie :</div>
-               <div id="crdp"><a href="http://www.crdp.ac-versailles.fr" target="_blank">CRDP</a></div>
-               <div id="mde78"><a href="http://www.mde78.ac-versailles.fr" target="_blank">MDE78</a></div>
-               <div id="cddp95"><a href="http://www.cddp95.ac-versailles.fr" target="_blank">CDDP95</a></div>
-               <div id="cddp91"><a href="http://www.cddp91.ac-versailles.fr" target="_blank">CDDP91</a></div>               
+              <div id="reseau">les ateliers CANOP&Eacute; dans l&rsquo;acad&eacute;mie de Versailles :</div>
+               <div id="mde78"><a href="http://www.mde78.ac-versailles.fr" target="_blank">78</a></div>
+               <div id="cddp95"><a href="http://www.cddp95.ac-versailles.fr" target="_blank">95</a></div>
+               <div id="cddp91"><a href="http://www.cddp91.ac-versailles.fr" target="_blank">91</a></div>               
             </div>
             <div class="containermenu">
             <div id="menusite" class="btn-group" ng-controller="MenuCtrl">     
                 <a href="#/accueil"   class="btn btn-custom-lighten"  id="lienAccueil" ><div>ACCUEIL</div></a>
                 <a href="#/actus"  class="btn btn-custom-lighten" id="lienActualites"> 
                 <div>ACTUALIT&Eacute;S</div></a>
+                <a href="#/ressources"  class="btn btn-custom-lighten" id="lienRessources"> 
+                <div>RESSOURCES</div></a>
                 <a href="#/confs"  class="btn btn-custom-lighten"  id="lienConferences"><div>CONF&Eacute;RENCES</div></a>
                <a href="#/contacts"  class="btn btn-custom-lighten"  id="lienContacts"><div>CONTACTS</div></a>
             	  
@@ -68,21 +72,21 @@
             <li><a href="http://blog-enc92.ac-versailles.fr/" target="_blank">Le blog ENC92</a></li>
         </ul>
         <ul>
-            <li><a href="http://blog.crdp-versailles.fr/librairiecddp92/" target="_self">Blog de la librairie</a></li>
-            <li><a href="https://0921824h.esidoc.fr" target="_self">Portail m&eacute;diath&egrave;que (e-sidoc)</a></li>
-            </br>
+            <li><a href="https://0921824h.esidoc.fr" target="_blank">Portail m&eacute;diath&egrave;que (e-sidoc)</a></li>
+            <br/>
+            <br/>
             <li><a  href="#/mentions" target="_self">Mentions l&eacute;gales</a></li>
         </ul>
         <ul>
-            <li><a href="http://www.cddp92.ac-versailles.fr/atelier/atelier.htm" target="_self">Ateliers d'&eacute;criture</a></li>
-            <li><a href="http://www.cddp92.ac-versailles.fr/litterature-jeunesse/" target="_self">Litt&eacute;rature jeunesse</a></li>
-            <li><a href="http://www.ecoleetcinema92.ac-versailles.fr/cinema/" target="_self">Ecole et cin&eacute;ma</a></li>
-            <li><a href="http://www.collegeaucinema92.ac-versailles.fr/cinema/" target="_self">Coll&egrave;ge au cin&eacute;ma</a></li>
+            <li><a href="http://www.cddp92.ac-versailles.fr/atelier/atelier.htm" target="_blank">Ateliers d'&eacute;criture</a></li>
+            <li><a href="http://www.cddp92.ac-versailles.fr/litterature-jeunesse/" target="_blank">Litt&eacute;rature jeunesse</a></li>
+            <li><a href="http://www.ecoleetcinema92.ac-versailles.fr/cinema/" target="_blank">Ecole et cin&eacute;ma</a></li>
+            <li><a href="http://www.collegeaucinema92.ac-versailles.fr/cinema/" target="_blank">Coll&egrave;ge au cin&eacute;ma</a></li>
         </ul>
         <div id="logocg92"></div>
         <div id="textecg92">partenaire de l'&Eacute;ducation nationale pour aider &agrave; la r&eacute;ussite &eacute;ducative de tous les &eacute;l&egrave;ves du d&eacute;partement.
+        </div>
     </div>
-</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-sanitize.min.js"></script>
@@ -93,7 +97,7 @@
 <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
 
 <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
-<script type="text/javascript">jwplayer.key="y4NhWyvuWV0u8DMVtM42SnE/IoztWdY1B0hc9A==";</script>
+<script type="text/javascript">jwplayer.key="1s2+dqpOo0SKOSvPAQyF6vANa/cjx44DZ5TCDQ==";</script>
 <script type="text/javascript" src="js/x2js/xml2json.js"></script>
 
 <script type="text/javascript" src="js/website.js"></script>

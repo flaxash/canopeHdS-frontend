@@ -7,6 +7,8 @@
 	color: rgba(255,122,5,1.00);	
 }
 #interfacevideo {
+    display:block;
+	height:auto;
 	position:relative;
 	min-height:280px;	
 }
@@ -59,7 +61,7 @@ font-size:12px !important;
 }
 #documents {
 	position:relative;
-	width:50%;
+	width:40%;
 	margin-left: 10px;	
 }
 #documents span {
@@ -97,12 +99,6 @@ div .docjoint {
 	margin-left:10px;
 	margin-top:25px;
 	z-index:9;
-}
-#interfacevideo {
-	display:block;
-	height:auto;
-	position:relative;
-		
 }
 #menuInfos {
 	float:left;

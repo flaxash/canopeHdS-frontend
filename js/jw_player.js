@@ -5,9 +5,9 @@ cddp92App.directive('jwPlayer', function () {
        link:function (scope, element, attrs) {
 	   	scope.$watch('urlVideo', function (value) {
 			   if (value) {
-				   jwplayer("player").setup({
+                   var playerInstance = jwplayer('player');
+				   playerInstance.setup({
 					file: value,
-					logo:{ hide:true },
 					height: 240,
 					width: 360
 					});

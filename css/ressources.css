@@ -1,0 +1,26 @@
+/*
+.ressources.li {
+    text-decoration: none;
+    list-style: none;
+    
+}
+*/
+ul.listeRessources {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    margin-left: 60px;
+}
+span.listeRessources {
+   margin-left: 20px;
+    
+}
+/*hack de bootstrap pour affichage en colonnes */
+@media (min-width: 1200px) {
+    .span5 {
+        margin-left: 10px !important;
+    }
+}
+.fa-2x {
+    vertical-align: -20%;
+}
