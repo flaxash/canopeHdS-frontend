@@ -80,7 +80,7 @@ a {
 	color:rgba(255,122,5,1.00);
 	text-decoration:none;
 }
-#crdp, #mde78, #cddp95, #cddp91 {
+#crdp, #mde78, #cddp95, #cddp91, #reseau-canope {
 	font-size:18px;
 	float:left;
 	margin-left:50px;
@@ -122,7 +122,7 @@ a {
 .footer ul {
 	float:left;
 	padding-top:10px;
-	margin-right:40px;
+	margin-right:30px;
 	display:block;
 	list-style-type:none;
 	font-size:small;

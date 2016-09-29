@@ -1,10 +1,10 @@
 <div class="container-view">
     <div class="section"></div>
-    <div class="titresection font-effect-shadow-multiple"> Actualit&eacute;s du Canop&eacute; Hauts de Seine (92)</div>
+    <div class="titresection font-effect-shadow-multiple"> Actualit&eacute;s de l'Atelier Canop&eacute; 92 - Suresnes</div>
     <div id="liens">
-    <a href="http://www.cddp92.ac-versailles.fr/new_letter/index.htm" target="_blank"><button type="button" class="btn btn-warning"><img src="images/inbox.png" class="imginbox" /> newsletter du Canopé HdS</button></a>
+    <a href="http://www.cddp92.ac-versailles.fr/lettre_info_2015/" target="_blank"><button type="button" class="btn btn-warning"><img src="images/inbox.png" class="imginbox" /> Retrouvez les newsletters</button></a>
     <a href="feed://www.cddp92.ac-versailles.fr/drupal7/rss.xml" target="_blank"><button type="button" class="btn btn-warning"><img src="images/rss.png" class="imgrss" /> flux rss du site</button></a>
-    <a href="https://twitter.com/canopehds" target="_self"><button type="button" class="btn btn-warning"><img src="images/twitter_blanc.png" class="imgtwitter" /> suivre @Canop&eacute; HdS</button></a>
+    <a href="https://twitter.com/canope_92" target="_self"><button type="button" class="btn btn-warning"><img src="images/twitter_blanc.png" class="imgtwitter" /> suivre @Canope_92</button></a>
     </div>
       <div ng-controller="ActualitesListCtrl" class="actualites">
         <!--<ul id="titres">
@@ -23,7 +23,7 @@
           </li>
         </ul>-->
         <accordion >
-        	<accordion-group id="actusList"  ng-repeat="actualite in actualites | orderBy:sortProp">
+        	<accordion-group id="actusList"  ng-repeat="actualite in actualites | orderBy:sortProp" >
             	<accordion-heading >
                 <div class="thumb img-rounded" style=" background-image: url({{actualite.image}}); "></div>
                 <span class="entete font-effect-shadow-multiple" ng-bind-html="actualite.title" ></span>
