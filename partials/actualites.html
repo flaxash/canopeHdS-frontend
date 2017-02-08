@@ -22,6 +22,7 @@
             <div id="espace"></div>
           </li>
         </ul>-->
+<!--
         <accordion >
         	<accordion-group id="actusList"  ng-repeat="actualite in actualites | orderBy:sortProp" >
             	<accordion-heading >
@@ -33,10 +34,30 @@
                 <div class="visuel img-rounded" style=" background-image: url({{actualite.image}}); "></div>
               <div class="soustitre" ng-bind-html="actualite.soustitre"></div>
               <div class="date" >{{actualite.date}}</div>    	
-            <!-- <button class="btn doc "><div ng-bind-html="actualite.docs"></div></button></p>-->
+             <button class="btn doc "><div ng-bind-html="actualite.docs"></div></button></p>
              <div class="description" ng-bind-html="actualite.descriptif"></div>
            </accordion-group>
         </accordion>
+
+        <div ng-repeat="actualite in actualites | orderBy:sortProp">
+            <a ng-href="{{'#/actus#'+actualite.nid}}">
+                <div class="visuel img-rounded" style=" background-image: url({{actualite.image}}); "></div>
+            </a>
+        </div>
+        <br/><br/>
+        <div id="espace"></div>
+-->
+     <div ng-repeat="actualite in actualites | orderBy:sortProp">
+            <article class="uk-article" ng-attr-id="{{actualite.nid}}">
+                <div class="visuel img-rounded" style=" background-image: url({{actualite.image}}); "></div>
+                <h1 class="uk-article-title" ng-bind-html="actualite.title"></h1>
+                <p class="uk-article-meta">{{actualite.date}}</p>
+                <p ng-bind-html="actualite.descriptif"></p>
+            </article>
+          <br/>
+          <div class="separateur"></div>
+          <div id="espace"></div>
+        </div>
       </div>
 </div>
 <div class="espace-footer"></div>

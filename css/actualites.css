@@ -59,7 +59,7 @@
 
 }
 .actualites .description {
-	float:left;
+	display: block;
 	text-align:justify;
 	text-justify:inter-word;
 	padding-top:10px;
@@ -70,10 +70,11 @@
 }
 .actualites .visuel {
 	float:left;
-	margin-left:25px;
-	margin-top:10px;
-	width:400px;
-	height:150px;
+	margin-left: 5px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+	width:115px;
+	height:115px;
 	background-size: cover; 	
 	background-position:center;
 	border-style:solid;
@@ -87,6 +88,10 @@
 	width:400px;
 	margin-left:20px;
 	margin-top:5px;
+}
+.actualites h1 {
+    font-size:large !important;
+    line-height: 25px !important;
 }
 .actualites .titre {
 	float:left;

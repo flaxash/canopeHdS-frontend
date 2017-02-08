@@ -102,9 +102,13 @@
 #actuspreviewlist li {
 	list-style:none;
 	margin-bottom:10px;
+  min-height: 40px;
 }
 #actuspreviewlist a {
 	text-decoration:none;
+}
+#actupreview {
+    min-height: 60px;
 }
 
 #actuspreviewlist .separateur {
@@ -113,9 +117,14 @@
 	width:100%;
 	height:2px;
 }
+#actuspreviewlist .titre {
+	float: left;
+}
 #actuspreviewlist .previewactu {
-	width:100%;
-	height:30px;
+	width:50px;
+	height:50px;
+    margin-right: 10px;
+  float: left;
 	background-size:cover;
 	background-position:center;	
 	border-style:solid;
