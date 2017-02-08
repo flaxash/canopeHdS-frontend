@@ -133,7 +133,7 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
 		addClass("active",d);
 		//
 		
-  		$http.get('http://www.cddp92.ac-versailles.fr/drupal7/?q=gateway/node/' + $routeParams.id + '.json').success(function(data) {
+  		$http.get('http://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/node/' + $routeParams.id + '.json').success(function(data) {
     	$scope.conference = data;
 		$scope.onglet="conference";
 		$scope.urlVideo = data.field_video.und[0].value;
