@@ -2,51 +2,11 @@
     <div class="section"></div>
     <div class="titresection font-effect-shadow-multiple"> Actualit&eacute;s de l'Atelier Canop&eacute; 92 - Suresnes</div>
     <div id="liens">
-    <a href="http://www.cddp92.ac-versailles.fr/lettre_info_2015/" target="_blank"><button type="button" class="btn btn-warning"><img src="images/inbox.png" class="imginbox" /> Retrouvez les newsletters</button></a>
-    <a href="feed://www.cddp92.ac-versailles.fr/drupal7/rss.xml" target="_blank"><button type="button" class="btn btn-warning"><img src="images/rss.png" class="imgrss" /> flux rss du site</button></a>
-    <a href="https://twitter.com/canope_92" target="_self"><button type="button" class="btn btn-warning"><img src="images/twitter_blanc.png" class="imgtwitter" /> suivre @Canope_92</button></a>
+    <a href="http://www.reseau-canope.fr/atelier-hauts-de-seine/newsletters" target="_blank"><button type="button" class="btn btn-warning"><i class="fa fa-newspaper-o fa-4x" aria-hidden="true"></i><span class="legende_btn">Retrouvez les newsletters</span></button></a>
+<!--    <a href="feed://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/rss.xml" target="_blank"><button type="button" class="btn btn-warning"><img src="images/rss.png" class="imgrss" /> flux rss du site</button></a>-->
+    <a href="https://twitter.com/canope_92" target="_self"><button type="button" class="btn btn-warning"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i><span class="legende_btn">Suivre @Canope_92</span></button></a>
     </div>
       <div ng-controller="ActualitesListCtrl" class="actualites">
-        <!--<ul id="titres">
-        	<li ng-repeat="actualite in actualites | orderBy:date" data-ng-click="$parent.actu=actualite.nid">
-            	<div><span class="titremenu" ng-bind-html="actualite.title" ></span></div>
-           </li>
-        </ul>
-        <ul id="actusList">
-          <li class="div-repeat" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="actualite in actualites | orderBy:date" ng-show="$parent.actu == actualite.nid"> 
-            <div class="titre font-effect-shadow-multiple" ng-bind-html="actualite.title"  id="actualite.nid"></div>
-            <div class="date" >{{actualite.date}}</div>
-            <div class="description" ng-bind-html="actualite.body"></div>
-            <div id="espace"></div>
-            <div class="separateur"></div>
-            <div id="espace"></div>
-          </li>
-        </ul>-->
-<!--
-        <accordion >
-        	<accordion-group id="actusList"  ng-repeat="actualite in actualites | orderBy:sortProp" >
-            	<accordion-heading >
-                <div class="thumb img-rounded" style=" background-image: url({{actualite.image}}); "></div>
-                <span class="entete font-effect-shadow-multiple" ng-bind-html="actualite.title" ></span>
-                <span class="dateliste">{{actualite.date}}</span>
-              </accordion-heading>
-                <p><div class="titre font-effect-shadow-multiple" ng-bind-html="actualite.annonce"></div>
-                <div class="visuel img-rounded" style=" background-image: url({{actualite.image}}); "></div>
-              <div class="soustitre" ng-bind-html="actualite.soustitre"></div>
-              <div class="date" >{{actualite.date}}</div>    	
-             <button class="btn doc "><div ng-bind-html="actualite.docs"></div></button></p>
-             <div class="description" ng-bind-html="actualite.descriptif"></div>
-           </accordion-group>
-        </accordion>
-
-        <div ng-repeat="actualite in actualites | orderBy:sortProp">
-            <a ng-href="{{'#/actus#'+actualite.nid}}">
-                <div class="visuel img-rounded" style=" background-image: url({{actualite.image}}); "></div>
-            </a>
-        </div>
-        <br/><br/>
-        <div id="espace"></div>
--->
      <div ng-repeat="actualite in actualites | orderBy:sortProp">
             <article class="uk-article" ng-attr-id="{{actualite.nid}}">
                 <div class="visuel img-rounded" style=" background-image: url({{actualite.image}}); "></div>

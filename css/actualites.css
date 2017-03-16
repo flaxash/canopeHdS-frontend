@@ -11,6 +11,9 @@
 	color:	rgba(255,122,5,1.00) ;
 	font-size:24px ;
 }
+.legende_btn {
+    display: block;
+}
 .imgtwitter {
 	width:18px;
 	height:18px;	
