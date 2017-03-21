@@ -133,11 +133,14 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
 		addClass("active",d);
 		//
 		
-  		$http.get('https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/node/' + $routeParams.id + '.json').success(function(data) {
-    	$scope.conference = data;
-		$scope.onglet="conference";
-		$scope.urlVideo = data.field_video.und[0].value;
-		$scope.setOnglet = function (numero) {
+    $http.get('https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/node/' + $routeParams.id + '.json').success(function(data) {
+        $scope.conference = data;
+        $scope.onglet="conference";
+        $scope.urlVideo = data.field_video.und[0].value;
+        jwplayer("player").setup({
+            file: $scope.urlVideo
+        });
+        $scope.setOnglet = function (numero) {
 			
 			switch (numero) {
 				case 1:
@@ -156,6 +159,9 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
 		}
 		$scope.setChapitre = function (item) {
 			$scope.urlVideo = item.value;
+      jwplayer("player").setup({
+            file: $scope.urlVideo
+        });
 		}
 		
 	});	
