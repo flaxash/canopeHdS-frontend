@@ -126,43 +126,47 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
   			});
 
 	})
-	.controller('ConfplayerCtrl', function ($scope, $routeParams, $http) {
+	.controller('ConfplayerCtrl',['$scope', '$routeParams', '$http','ngYoutubeEmbedService', function ($scope, $routeParams, $http) {
 		//todo : remplacer l' appel  au json par un service + allumer le bouton 'La conférence'
 		removeAllMenuActiveClass();
 		var d = document.getElementById("lienConferences");
 		addClass("active",d);
+    $scope.id = $routeParams.id;
+    //alert("routeParams : " + $routeParams.id);
 		//
 		
     $http.get('https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/node/' + $routeParams.id + '.json').success(function(data) {
         $scope.conference = data;
         $scope.onglet="conference";
         $scope.urlVideo = data.field_video.und[0].value;
-        jwplayer("player").setup({
-            file: $scope.urlVideo
-        });
+        var player = ngYoutubeEmbedService.getPlayerById('myplayer'); // Returns the iframe player instance
+        
+        player.loadVideoByUrl(urlVideo);
+
         $scope.setOnglet = function (numero) {
 			
-			switch (numero) {
-				case 1:
-				$scope.onglet="conference";
-				break;
-				case 2:
-				$scope.onglet="auteur";
-				break
-				case 3:
-				$scope.onglet="biblio"
-				break;
-				default:
-				$scope.onglet="conference";
-				break;	
-			}
-		}
-		$scope.setChapitre = function (item) {
-			$scope.urlVideo = item.value;
-      jwplayer("player").setup({
-            file: $scope.urlVideo
-        });
-		}
+          switch (numero) {
+            case 1:
+            $scope.onglet="conference";
+            break;
+            case 2:
+            $scope.onglet="auteur";
+            break
+            case 3:
+            $scope.onglet="biblio"
+            break;
+            default:
+            $scope.onglet="conference";
+            break;	
+          }
+        }
+        $scope.setChapitre = function (item) {
+          $scope.urlVideo = item.value;
+          player.loadVideoByUrl(urlVideo);
+//          jwplayer("player").setup({
+//                file: $scope.urlVideo
+//            });
+        }
 		
-	});	
-})
+	   });	
+}])

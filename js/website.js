@@ -1,6 +1,6 @@
 
 /* App Module */
-var cddp92App = angular.module('website',  ['ngSanitize','ui.bootstrap','twitter.timeline']);
+var cddp92App = angular.module('website',  ['ngSanitize','ui.bootstrap','twitter.timeline', 'ngYoutubeEmbed','ngRoute']);
 
 cddp92App.config(['$routeProvider', function($routeProvider) {
         $routeProvider.
@@ -39,6 +39,6 @@ function removeAllMenuActiveClass() {
 	removeClass (	"active",document.getElementById("lienConferences"));
 	removeClass (	"active",document.getElementById("lienVenir"));
 	removeClass (	"active",document.getElementById("lienAccueil"));
-    removeClass (	"active",document.getElementById("lienRessources"));
+  removeClass (	"active",document.getElementById("lienRessources"));
 
 }

@@ -5,7 +5,14 @@
         <!--<video id="player" src="{{urlVideo}}" width="425" height="300" controls preload></video>-->
         <div class="espace-titre-conf"></div>
         <div id="interfacevideo">
-            <div id='player'>Chargement du lecteur ...</div>
+<!--            <div id='player'>Chargement du lecteur ...</div>-->
+            <ng-youtube-embed 
+                video="urlVideo" 
+                videoid="myplayer"
+                autoplay="flase"
+                color="white"
+            >
+            </ng-youtube-embed>
             <div id="zone_droite">
                 <span >Chapitres :</span><br/>
                 <ul id="liensChapitres">
