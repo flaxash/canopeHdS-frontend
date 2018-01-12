@@ -12,11 +12,17 @@
 	position:relative;
 	min-height:280px;	
 }
+#zone_gauche {
+	height :auto;
+	float:left;
+	width:510px;
+	
+}
 #zone_droite {
 	height :auto;
 	float:left;
-	width:530px;
-	margin-left: 50px;
+	width:400px;
+	margin-left: 20px;
 	
 }
 #zone_droite ul {
@@ -26,9 +32,10 @@
 	font-size:16px;
 }
 #liensChapitres {
-	width:80px;
+	width:50px;
 	float:left;
 	list-style:none;
+  margin-left : 0px !important;
 	padding-top:10px;
 }
 #liensChapitres li {
@@ -40,7 +47,7 @@
 font-size:12px !important;	
 }
 #titresChapitres {
-	width:350px;
+	width:300px;
 	float:left;
 	list-style:none;	
 	font-size:14px;

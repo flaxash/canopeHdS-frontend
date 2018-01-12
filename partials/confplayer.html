@@ -5,19 +5,20 @@
         <!--<video id="player" src="{{urlVideo}}" width="425" height="300" controls preload></video>-->
         <div class="espace-titre-conf"></div>
         <div id="interfacevideo">
-<!--            <div id='player'>Chargement du lecteur ...</div>-->
-            <ng-youtube-embed 
-                video="urlVideo" 
-                videoid="myplayer"
-                autoplay="flase"
-                color="white"
-            >
-            </ng-youtube-embed>
+            <div id="zone_gauche">
+                <ng-youtube-embed 
+                    video="urlVideo" 
+                    videoid="myplayer"
+                    autoplay="flase"
+                    color="white"
+                >
+                </ng-youtube-embed>
+            </div>
             <div id="zone_droite">
                 <span >Chapitres :</span><br/>
                 <ul id="liensChapitres">
                     <li ng-repeat="item in conference.field_video.und" ng-click="setChapitre(item)">
-                         <button type="button" class="btn btn-lire" ><img src="images/play.png" class="imginbox" /><span>Lire</span></button>
+                         <button type="button" class="btn btn-lire" ><img src="images/play.png" class="imginbox" /></button>
                     </li>
                 </ul>
                 <ul id="titresChapitres">

@@ -142,9 +142,9 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
         var player = ngYoutubeEmbedService.getPlayerById('myplayer'); // Returns the iframe player instance
         
         player.loadVideoByUrl(urlVideo);
-
-        $scope.setOnglet = function (numero) {
-			
+    });
+    $scope.setOnglet = function (numero) {
+			    
           switch (numero) {
             case 1:
             $scope.onglet="conference";
@@ -160,13 +160,12 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
             break;	
           }
         }
-        $scope.setChapitre = function (item) {
-          $scope.urlVideo = item.value;
-          player.loadVideoByUrl(urlVideo);
-//          jwplayer("player").setup({
-//                file: $scope.urlVideo
-//            });
+    $scope.setChapitre = function (item) {
+        
+        $scope.urlVideo = item.value;
+        var player = ngYoutubeEmbedService.getPlayerById('myplayer');
+        player.loadVideoByUrl(urlVideo);
         }
 		
-	   });	
+	   	
 }])
