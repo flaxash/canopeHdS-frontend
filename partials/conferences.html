@@ -8,7 +8,7 @@
                 <div class="titre" ng-bind-html="conference.title" ></div>
                 <div class="auteur" ng-bind-html="conference.auteur"></div> 
                 
-                <div class="date">{{conference.date}}</div>
+                <div class="date" ng-bind-html="conference.date"></div>
                 </a>
                 <div class="separateur"></div>
               </li>
@@ -21,7 +21,7 @@
             <div class="espace"></div>
             <div class="label-filtre">Trier la liste des conf&eacute;rences selon
                 <select id="triselect" ng-model="sortProp" class="input-xs">
-                	  <option value="-date">la date</option>
+                	  <option value="-date" selected="selected">la date</option>
                     <option value="title">le titre</option>
                     <option value="auteur">les intervenants</option>                    
                 </select>

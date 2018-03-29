@@ -11,7 +11,7 @@
             <article class="uk-article" ng-attr-id="{{actualite.nid}}">
                 <div class="visuel img-rounded" style=" background-image: url({{actualite.image}}); "></div>
                 <h1 class="uk-article-title" ng-bind-html="actualite.title"></h1>
-                <p class="uk-article-meta">{{actualite.date}}</p>
+                <p class="uk-article-meta" ng-bind-html="actualite.date"></p>
                 <p ng-bind-html="actualite.descriptif"></p>
             </article>
           <br/>
