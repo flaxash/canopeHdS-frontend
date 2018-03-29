@@ -24,3 +24,20 @@ span.listeRessources {
 .fa-2x {
     vertical-align: -20%;
 }
+#offreservice {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    text-decoration : none;
+    color :rgba(78,78,78,1.00);
+}
+.nocolor {
+    text-decoration : none;
+    color :rgba(78,78,78,1.00);
+}
+.nocolor:hover {
+    text-decoration : none;
+    color:rgba(78,78,78,1.00);
+}

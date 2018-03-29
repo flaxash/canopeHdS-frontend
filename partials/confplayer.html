@@ -1,3 +1,6 @@
+<script type="text/javascript">
+
+</script>
 <div class="container-view">
  	<a href="#/confs"><button type="button" class="btn"><img src="images/back.png" class="imginbox" /> retour à la liste</button></a>
     <div class="haut">
@@ -29,12 +32,13 @@
                 
             </div>
         </div>
-        <div id="documents">
+        <div id="documents" ng-if="conference.field_docs_joints.length!=0">
         	<span >Documents :</span><br/>
-        	<ul id="listeDocs">
+        	<ul id="listeDocs" >
             	<li ng-repeat="item in conference.field_docs_joints.und">
                 	<div class="docname">{{item.description}} </div>
-                   <a href="https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/sites/default/files/docs_confs/{{item.filename}}" 
+                   <a href="drupal7/sites/default/files/docs_confs/{{item.filename}}"  
+                       onclick="baseURL+location.href=this.href; return false;"
                    target="_blank"><div class="docjoint"></div></a>
                </li>
             </ul>

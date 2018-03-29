@@ -2,6 +2,7 @@
 
 cddp92App.factory('StateService', function () {
     var message = 'Hello Message';
+    
     var getMessage = function () {
         return message;
     };
@@ -15,20 +16,21 @@ cddp92App.factory('StateService', function () {
     }
    })
 	.factory('jsonService', function ($http,$q) {
+       
 			 return {
-     			getActualites: function(callback) {
+        getActualites: function(callback) {
        			//$http.get('http://www.cddp92.ac-versailles.fr/drupalCddp/?q=gateway/views/actualitesApercu.json').success(callback);
-				$http.get('https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/views/actualites.json').success(callback);
+				$http.get( baseURL + 'drupal7/?q=gateway/actualites.json').success(callback);
 				},
 				getConferences:function(callback) {
 				//$http.get('http://www.cddp92.ac-versailles.fr/drupalCddp/?q=gateway/views/conferencesApercu.json').success(callback);
-				$http.get('https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/views/conferences.json').success(callback);	
+				$http.get(baseURL + 'drupal7/?q=gateway/conferences.json').success(callback);	
 				},
 				getConfsPreview:function(callback) {
-					$http.get('https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/views/confspreview.json').success(callback);	
+					$http.get(baseURL + 'drupal7/?q=gateway/confspreview.json').success(callback);
 				},
 				getActusPreview:function(callback) {
-					$http.get('https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/views/actuspreview.json').success(callback);	
+					$http.get(baseURL + 'drupal7/?q=gateway/actuspreview.json').success(callback);	
 				},
         getRssFromActusNum:function(callback) {
           $http.get('https://blog.crdp-versailles.fr/usagestice92/index.php/feed/atom').success(callback);

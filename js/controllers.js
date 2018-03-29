@@ -135,7 +135,7 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
     //alert("routeParams : " + $routeParams.id);
 		//
 		
-    $http.get('https://www.reseau-canope.fr/atelier-hauts-de-seine/drupal7/?q=gateway/node/' + $routeParams.id + '.json').success(function(data) {
+    $http.get(baseURL + 'drupal7/?q=gateway/node/' + $routeParams.id + '.json').success(function(data) {
         $scope.conference = data;
         $scope.onglet="conference";
         $scope.urlVideo = data.field_video.und[0].value;
