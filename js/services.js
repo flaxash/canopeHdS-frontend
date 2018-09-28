@@ -42,7 +42,7 @@ cddp92App.factory('StateService', function () {
             	getSlides: function(callback) {
        			//$http.get('http://www.cddp92.ac-versailles.fr/aLaUne/listeImages.xml').success(callback);
 				$http.get(
-                    "https://www.reseau-canope.fr/atelier-hauts-de-seine/aLaUne/listeImages.xml?t="+Math.random(),
+                    baseURL + "aLaUne/listeImages.xml?t="+Math.random(),
                     {transformResponse:function(data) {
                       // convert the data to JSON and provide
                       // it to the success function below
@@ -63,7 +63,7 @@ cddp92App.factory('StateService', function () {
 				getMessage: function(callback) {
        			//$http.get('http://www.cddp92.ac-versailles.fr/aLaUne/listeImages.xml').success(callback);
 				$http.get(
-                    "https://www.reseau-canope.fr/atelier-hauts-de-seine/aLaUne/listeImages.xml?t="+Math.random(),
+                    baseURL + "aLaUne/listeImages.xml?t="+Math.random(),
                     {transformResponse:function(data) {
                       // convert the data to JSON and provide
                       // it to the success function below

@@ -1,9 +1,9 @@
 
 /* App Module */
-var cddp92App = angular.module('website',  ['ngSanitize','ui.bootstrap','twitter.timeline', 'ngYoutubeEmbed','ngRoute']);
+var cddp92App = angular.module('website',  ['ngSanitize','ui.bootstrap', 'ngYoutubeEmbed','ngRoute','ngtweet']);
 
-//var baseURL = 'https://www.reseau-canope.fr/atelier-hauts-de-seine/';
-var baseURL = 'http://172.31.104.30/crdp-versailles/atelier92/';
+var baseURL = 'https://www.reseau-canope.fr/atelier-hauts-de-seine/';
+//var baseURL = 'http://172.31.104.30/crdp-versailles/atelier92/';
 
 cddp92App.config(['$routeProvider', function($routeProvider) {
         $routeProvider.

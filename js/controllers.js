@@ -84,6 +84,8 @@ cddp92App.controller('ViewsCtrl', function ($scope) {
 			});
 			$scope.slidenumber=0;
 			$scope.myInterval = 7000;
+      //load the tweets
+      //twttr.widgets.load();
 	})
 	.controller('ActusPreviewCtrl',  function ($scope, jsonService) {
 		jsonService.getActusPreview(function(data) {
